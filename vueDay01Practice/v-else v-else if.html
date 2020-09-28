@@ -1,0 +1,39 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-09-28 10:34:06
+ * @LastEditTime: 2020-09-28 10:40:04
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vueDay01_0928\v-else v-else if.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <div id="app">
+      <h1 v-if="flag">尊敬的超级vip</h1>
+      <h1 v-else>请登录</h1>
+
+      <h1 v-if="age>=80">80岁以上，撕纸</h1>
+      <h1 v-else-if="age>=70">70岁以上，广场舞</h1>
+      <h1 v-else-if="age>=20">20岁以上，蹦迪</h1>
+      <h1 v-esle>20岁以下，写作业</h1>
+    </div>
+  </head>
+  <body></body>
+  <script src="./vue/vue.js"></script>
+  <script>
+    /*
+      
+      */
+    const app = new Vue({
+      el: "#app",
+      data: {
+        flag: false,
+        age: 12,
+      },
+    });
+  </script>
+</html>

@@ -1,0 +1,36 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-09-28 11:39:04
+ * @LastEditTime: 2020-09-28 11:47:00
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vueDay01_0928\v-bind.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <img v-bind:src="imgSrc" alt="" v-bind:title="info" />
+    </div>
+  </body>
+  <script src="./vue/vue.js"></script>
+  <script>
+    /*
+v-bind作用：动态设置html的标签属性（访问data里面的数据）
+
+语法：v-bind :属性名=”属性值"
+*/
+    const app = new Vue({
+      el: "#app",
+      data: {
+        imgSrc: "6.jpg",
+        info: "这是一张图片",
+      },
+    });
+  </script>
+</html>

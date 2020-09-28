@@ -1,0 +1,49 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-09-28 10:10:31
+ * @LastEditTime: 2020-09-28 10:20:25
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vueDay01_0928\v-if,v-show.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <div v-if="flag">这是v-flag的内容</div>
+      <div v-show="flag">这是v-show的内容</div>
+    </div>
+    <script src="./vue/vue.js"></script>
+    <script>
+      /*
+        v-if v-show 控制元素的显示和隐藏
+
+        v-if :布尔值
+        如果是true:显示，反之隐藏
+
+        v-show:布尔值
+        实现原理：v-if动态的删除和创建元素
+        v-show则是动态的控制css样式（display:none）
+        使用场景：
+         1.如果是平凡切换用v-show(用v-if会频繁的删除和创建元素，会消耗性能)
+         2.如果某个元素要么显示要么隐藏，不太会切换的，推荐用v-if，如果初始渲染是false,v-if是惰性的，就不会渲       染元素，而v-show还是会创建出来然后改css样式为display:none.
+            
+         对于vip用户，不用看到广告，推荐用v-if
+
+        */
+
+      const app = new Vue({
+        el: "#app",
+        data: {
+          info: "hello vue",
+          flag: true,
+        },
+      });
+    </script>
+  </body>
+</html>

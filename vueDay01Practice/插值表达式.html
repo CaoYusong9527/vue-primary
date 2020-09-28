@@ -1,0 +1,39 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-09-28 09:38:55
+ * @LastEditTime: 2020-09-28 09:51:04
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vueDay01_0928\test.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 插值表达式 （小胡子语法）-->
+      <!-- 使用data中的数据渲染视图 -->
+      <!-- 支持一些方法和三元运算符 -->
+      <!-- 注意点：不是data中的变量不要直接用，要用先声明 -->
+      <!-- 在插值表达式中不能使用js语句的 -->
+      {{content}} {{obj.age}}
+    </div>
+    <script src="./vue/vue.js"></script>
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {
+          content: "hello",
+          obj: {
+            name: "zs",
+            age: 18,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-09-28 10:55:57
+ * @LastEditTime: 2020-09-28 20:11:28
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vueDay01_0928\案例.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #app {
+        width: 400px;
+        border: 2px solid deeppink;
+        text-align: center;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .title {
+        width: 400px;
+      }
+      button {
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+      .content {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="title">
+        <h3>闻王昌龄左迁龙标遥有此寄</h3>
+        <button @click="isShow=!isShow">收起</button>
+      </div>
+      <div v-show="isShow" class="content">
+        <p>杨花落尽子规啼</p>
+        <p>闻道龙标过五溪</p>
+        <p>我寄愁心与明月</p>
+        <p>随风直到夜郎西</p>
+      </div>
+    </div>
+  </body>
+
+  <script src="./vue/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: "#app",
+      data: {
+        isShow: true,
+      },
+    });
+  </script>
+</html>

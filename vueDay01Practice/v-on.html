@@ -1,0 +1,50 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-09-28 10:40:24
+ * @LastEditTime: 2020-09-28 10:53:12
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vueDay01_0928\v-on.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 点击切换显示与隐藏 -->
+      <button @click="isShow =!isShow">btn1</button>
+      <button @click="foo">btn2</button>
+      <h1 v-show="isShow">我是内容</h1>
+    </div>
+    <script src="./vue/vue.js"></script>
+    <script>
+      /*
+        on的作用：
+        1.内联语句：将要执行的代码，直接写在里面
+        v-on:事件名='执行的代码'  
+        2.指定成methods中的函数
+
+        v-on:事件名='methods中的函数'
+
+        3.指定成methods中的函数并传参
+        v-on:事件名='methods中的函数(参数)'
+
+        */
+      const app = new Vue({
+        el: "#app",
+        data: {
+          isShow: true,
+        },
+        methods: {
+          foo() {
+            this.isShow = !this.isShow;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

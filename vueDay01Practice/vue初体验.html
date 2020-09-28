@@ -1,0 +1,39 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-09-28 09:09:18
+ * @LastEditTime: 2020-09-28 09:32:17
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vueDay01_0928\vue初体验.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{msg}}</h1>
+      <h2>{{content}}</h2>
+    </div>
+    <script src="./vue/vue.js"></script>
+    <script>
+      // 只要引入了vue，就会在全局有一个vue的构造函数
+      const app = new Vue({
+        //   指定视图和数据
+        //el:可指定的vue所管理的视图范围，值是一个选择器(el不能指定html和body)
+        el: "#app",
+        // data :指定的vue中使用的数据
+        data: {
+          msg: "hello Vue",
+          content: "hello world",
+        },
+      });
+    </script>
+
+    <!-- vue的基本功能模块就是一个稍大一点的模板引擎 -->
+    <!-- vue的实例化过程，将data中的所有数据都会添加到他的实例对象中 -->
+  </body>
+</html>

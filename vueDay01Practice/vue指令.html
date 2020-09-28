@@ -1,0 +1,39 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-09-28 09:57:53
+ * @LastEditTime: 2020-09-28 10:09:43
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vueDay01_0928\vue指令.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <div v-html="info"></div>
+      <div v-text="info"></div>
+
+      <!-- v-html==>innerHTML()  不够灵活，完全可以被插值表达式替代-->
+      <!-- v-text==>innerText() 在你需要解析标签的时候使用-->
+      <!-- 基本上使用场景不多 -->
+    </div>
+  </body>
+  <script src="./vue/vue.js"></script>
+  <script>
+    /*
+      vue指令：实际上就是一些特殊的html标签属性，特点都是以v-开头
+      */
+
+    const app = new Vue({
+      el: "#app",
+      data: {
+        info: "<h1> hello World</h1>",
+      },
+    });
+  </script>
+</html>
